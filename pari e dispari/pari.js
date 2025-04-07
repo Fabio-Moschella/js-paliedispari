@@ -7,7 +7,7 @@ function getRandomNumberFrom1To6(max, min) {
   return randomNumber;
 }
 
-function isFinalSumOddEven() {
+function isFinalSumIsOddOrEven() {
   //se la somma dei numeri è pari
   if (sumUserAndPcNumber % 2 === 0) {
     isPari = " Pari";
@@ -26,8 +26,12 @@ function isFinalSumOddEven() {
 // PARI E DISPARI
 // L`UTENTE SCEGLIE TRA PARI E DISPARI...
 const oddAndEven = prompt("scegli pari o dispari");
+// stampo la scelta dell`utente
+console.log("utente sceglie", oddAndEven);
 // ED INSERISCE UN NUMERO DA 1 A 5
 const userNumber = prompt("inserisci un numero da 1 a 6");
+// stampo il numero scelto dall`uteente
+console.log("utenete sceglie il numero:", userNumber);
 // DICHIARO IL VALORE DEL NUMERO DEL PC
 const pcNumber = getRandomNumberFrom1To6(6, 1);
 //STAMPO IL NUMERO DEL PC
@@ -36,4 +40,4 @@ console.log(pcNumber);
 const sumUserAndPcNumber = userNumber + pcNumber;
 // STAMPO LA SOMMA FINALE
 console.log(sumUserAndPcNumber);
-console.log(isFinalSumOddEven());
+console.log(isFinalSumIsOddOrEven());
