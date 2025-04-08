@@ -3,23 +3,25 @@
 //##############################################################################################################################
 
 function isPalindromWord(word) {
-  for (i = 0; i < word.length; i++) {
-    let char = word[i];
-    let charMirror = word[word.length - 1 - i];
-    console.log(char, charMirror);
-    if (word !== char && charMirror !== word) {
-      let isNotPalindromWord;
-      return isNotPalindromWord;
-    }
+  const lowerCaseWord = word.toLowerCase();
+  const numberOfIterations = Math.ceil(word.lenght / 2);
+  const lastIndex = word.lenght - 1;
+  for (i = 0; i < numberOfIterations; i++) {
+    let char = lowerCaseWord[i];
+    let charMirror = lowerCaseWord[lastIndex - i];
+
+    if (char !== charMirror) return false;
   }
+  return true;
 }
 
 //###############################################################
 //MAIN
 //###############################################################
 const userWord = prompt("inserire una parola");
-console.log(isPalindromWord(userWord));
-
+const isUserWordPalindrome = isPalindromWord(userWord);
+// operatore ternario
+alert(isUserWordPalindrome ? "palindroma" : "Not Palindroma");
 // girafarrg
 
 // i = 0 => 0 / length -1 -0

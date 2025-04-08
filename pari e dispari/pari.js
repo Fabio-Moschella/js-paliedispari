@@ -12,12 +12,11 @@ function isFinalSumIsOddOrEven() {
   if (sumUserAndPcNumber % 2 === 0) {
     isPari = " Pari";
     return isPari;
-  } //ALTRIMENTI
-  else {
-    isDispari = "Dispari";
-    // se è dispari
-    return isdispari;
   }
+
+  isDispari = "Dispari";
+  // se è dispari
+  return isdispari;
 }
 // ###############################################################
 // MAIN
